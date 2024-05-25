@@ -1,0 +1,546 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif; 
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: bisque;
+    padding: 20px 0;
+}
+header > img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15rem;
+}
+nav ul{
+    list-style: none;
+    text-align: center;
+    margin-top: 2rem;
+}
+nav li {
+    display: inline;
+    margin-right: 2rem;
+}
+nav li a {
+    text-decoration: none;
+    color: black;
+    font-size: 25px;
+    font-weight: 400;
+    padding: 13px;
+    border-radius: 20px;
+    box-shadow: -18px -1px 16px -12px rgba(0, 0, 0, 0.4);
+}
+nav li a:hover{
+    background-color: #b16d4f;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: -18px -1px 16px -12px rgba(0, 0, 0, 0.4);
+}
+.burger {
+  display: none;
+}
+.checkbox {
+  display: none;
+}
+#home{
+    display: flex;
+    position: static;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+#home > h2{
+    margin-right: 3rem;
+}
+#home img{
+    max-width: 90%;
+    object-fit: contain;
+    z-index: 1;
+    filter: blur(3px); 
+}
+
+ #home >h1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 14%;
+  padding: 14px;
+    z-index: 2;
+    position: absolute;
+    font-size: 6rem;
+    -webkit-text-fill-color: #94562f;
+    text-shadow: 2px 2px  2px #000000; 
+    animation: movedown 2s linear 1;
+    animation-delay: 1s;
+    visibility: hidden;
+    animation-fill-mode: forwards;
+  }
+
+h2{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ccontainer {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0;
+  }
+  
+  .ccontainer .card {
+    position: relative;
+    width: 370px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.05);
+    margin: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .ccontainer .card .content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.5s;
+  }
+  
+  .ccontainer .card:hover .content {
+    transform: scale(1.2,1.2);
+  }
+  
+  .ccontainer .card .content .imgBx {
+    position: relative;
+    width: 360px;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+  .ccontainer .card .content .imgBx img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .ccontainer .card .content .contentBx h3 {
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-size: 18px;
+    text-align: center;
+    margin: 20px 0 10px;
+    line-height: 1.1em;
+    text-decoration: none;
+  }
+  
+  .ccontainer .card .content .contentBx h3 span {
+    font-size: 12px;
+    font-weight: 300;
+
+  }
+  h4{
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+body .ncontainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 2000px;
+   
+  }
+  
+  body .ncontainer .card {
+    position: relative;
+    min-width: 230px;
+    height: 350px;
+    box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
+      inset -5px -5px 15px rgba(255, 255, 255, 0.1),
+      5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    margin: 30px;
+    transition: 0.5s;
+  }
+  body .ncontainer .card .box {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    background:  #dca18b;;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  body .ncontainer .card .box:hover {
+    transform: translate(-50px);
+  }
+  
+  body .ncontainer .card .box:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 24, 24, 0.03);
+  }
+  
+  body .ncontainer .card .box .content {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  body .ncontainer .card .box .content h2 {
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8rem;
+    color: rgba(255, 255, 255, 0.21);
+  }
+  
+  body .ncontainer .card .box .content h3 {
+    position: sticky;
+    font-size: 24px;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+    transition: 0.5s;
+    margin-bottom: 15px;
+  }
+  
+  body .ncontainer .card .box .content p {
+    position: sticky;
+    font-size: 1rem;
+    font-weight: 500;
+    color: rgba(6, 6, 6, 0.9);
+    z-index: 1;
+    transition: 0.5s;
+  }
+  
+  body .ncontainer .card .box .content a {
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: black;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: 0.5s;
+  }
+  body .ncontainer .card .box .content a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    background: #fff;
+    color: #000;
+  }
+  .about{
+    width: 100%;
+    min-height: 90vh;
+    background-color:#e1cbcb;
+  }
+  .container{
+    width: 80%;
+    display: block;
+    margin: auto;
+    padding-top: 30px;
+  }
+  .about-section{
+    float: left;
+    width: 55%;
+  }
+  .about-image{
+    float: right;
+    width: 40%;
+    margin-top: 85px;
+  }
+  .about-image img{
+    width: 100%;
+    height: auto;
+    
+  }
+  .about-section .title{
+    text-transform: uppercase;
+    font-size: 26px;
+  }
+  .about-section .content p{
+    margin-top: 10px;
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .abt-button {
+    margin-top: 15px;
+  }
+  .abt-button button{
+ padding: 12px 40px;
+ background-color: #94562f;
+ color: #fff;
+ font-size: 25px;
+ letter-spacing: 1.5px;
+  }
+  .abt-button button:hover{
+    background-color: #b16d4f;
+  }
+   .social{
+    margin-top:  40px;
+
+  }
+   .social i{
+    color: #000;
+    font-size: 40px;
+    padding: 5px 20px;
+  }
+  .social i:hover{
+    background-color: #040404;
+    color: #fff;
+    border-radius: 50%;
+  }
+  #contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.con-img{
+
+  overflow: hidden;
+  position: relative;
+}
+  .con-img img{
+    max-width: 50%;
+    height: 100%;
+  }
+  .con-img .left2{
+    max-width: 50%;
+    height: 100%;
+    float:right;
+  }
+ .con-title{
+  font-size: 3rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  } 
+  .con-form{
+    position: absolute;
+    min-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form{
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    color: #000;
+  }
+  .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select {
+    font-family: poppins,sans-serif;
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    background: rgb(33 24 24 / 20%);
+    color: #080707;
+  }
+
+  .form-group input::placeholder,
+  .form-group select {
+    color: rgba(255, 255, 255, 0.7);
+  }
+
+  button {
+    font-family: poppins,sans-serif;
+    width: 50%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #c67d5b;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #6e3821;
+  }
+  .left{
+    width: 100%;
+  }
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3rem;
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+.logo{
+    text-align: end;
+    width: 100px;
+    height: auto;
+}
+footer div img{
+    max-width: 5rem;
+}
+footer div{
+    flex: 1; 
+}
+footer div p{
+    color: white;
+}
+@media only screen and (max-width:768px){
+    nav li{
+        display: grid;
+        margin-bottom: 2rem;
+    }
+    .burger {
+      display: block;
+        color: #0c0b0b;
+        font-size: 45px;
+        cursor: pointer;
+        text-align: center;
+        margin: 10px;
+    }
+    .checkbox{
+      display: none;
+    }
+    .burger-menu {
+      display: none;
+  }
+
+    .checkbox:checked ~ .burger-menu {
+      display: block;
+  }
+
+    #home img{
+        object-fit: contain;
+    }
+    #home >h1 {
+        font-size: 3rem;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    section #catalog{
+        flex-flow: column;
+        margin-top: 3rem;
+     }
+     .container{
+      width: 80%;
+      display: block;
+      margin: auto;
+      padding-top: 50px;
+    }
+    .about-section{
+      float: none;
+      width: 100%;
+      display: block;
+      margin: auto;
+    }
+    .about-section .title{
+      text-align: center;
+      font-size: 19px;
+     }
+    .about-image{
+      float: none;
+      width: 100%;
+      margin-top: 10px;
+    }
+    .about-image img{
+      width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+    }
+  
+    .abt-button button{
+      text-align: center;
+    }
+    .about-section .social{
+      text-align: center;
+      margin-top:  10px;
+    }
+    .about-section .social i{
+      font-size: 30px;
+    }
+    .con-img .left2{
+      display: none;
+    }
+    .con-img img {
+      max-width: 100%;
+      height: 100%;
+}
+.abt-button {
+text-align: center;
+}
+form{
+  width: 75%;
+}
+}
+@media (min-width: 750px) and (max-width: 1032px){
+  .about{
+    height: 100vh;
+  }
+}
+@keyframes movedown{
+  0% {
+    transform: translateY(-100px);
+    visibility: visible;
+}
+100% {
+    transform: translateY(0);
+    visibility: visible;
+}
+}
